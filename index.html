@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾经憧憬未来,如今向往过去</title>
+    <link rel="stylesheet" href="css/ss.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- 图片 -->
+        <div class="pacture" id="pic">
+            <ul>
+                <li><img id="img1" src="img/tu1.jpg" alt=""></li>
+            </ul>
+
+        </div>
+
+    </header>
+    <section>
+        <div class="time">
+            <span>距离失去你已经过去了</span>
+            <h3 id="shiqu"></h3>
+        </div>
+        <div class="box-1">
+
+            <h1>
+               你好
+            </h1>
+            <p>请</p>
+        
+
+        </div>
+
+        <div class="box-2">
+            <div class="box-2-w">
+                <h1>相遇也是种错过</h1>
+                
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <hr style="width:100%;border: none;height: 1px;background-color: rgb(233, 151, 229);">
+        <div class="lin">
+            <p><a class="link-1" href="./2020love">2020年网页</a></p><br>
+            <p><a class="link-1" href="#">2021年制作中</a></p><br>
+            <p><a class="link-1" href="#">待添加</a></p>
+        </div>
+        <div class="word">
+            <h2 style="font-family:font656;">时间是让人猝不及防的东西</h2>
+        </div>
+        <div style="clear: both;"> </div>
+        <div class="ssq">
+            <h3>时光的尽头是新的开始</h3>
+            <h3>我在未来等你</h3>
+        </div>
+    </footer>
+    <!-- 时间倒计时 -->
+    <script>
+        function show_date_time() {
+            window.setTimeout("show_date_time()", 1e3);
+            var BirthDay = new Date("2019/10/19"), today = new Date,
+                timeold = today.getTime() - BirthDay.getTime(), msPerDay = 864e5,
+                e_daysold = timeold / msPerDay, daysold = Math.floor(e_daysold),
+                e_hrsold = 24 * (e_daysold - daysold), hrsold = Math.floor(e_hrsold),
+                e_minsold = 60 * (e_hrsold - hrsold), minsold = Math.floor(60 * (e_hrsold - hrsold)),
+                seconds = Math.floor(60 * (e_minsold - minsold));
+            shiqu.innerHTML = daysold + "天" + hrsold + "时" + minsold + "分" + seconds + "秒";
+        }
+        show_date_time();
+    </script>
+    <script>
+        window.onload = function () {
+            // 从第二张开始
+            var img1 = document.getElementById("img1");
+            var imgArr = ["img/tu1.jpg", "img/tu2.jpg", "img/tu3.jpg", "img/tu4.jpg", "img/tu5.jpg", "img/tu6.jpg", "img/tu7.jpg", "img/tu8.jpg", "img/tu9.jpg", "img/tu10.jpg", "img/tu11.jpg", "img/tu12.jpg",]
+            var index = 0;
+
+            //设置定时器，三秒后执行change函数
+            setInterval(
+                function () {
+                    index++;
+                    img1.src = imgArr[index];
+                    if (index >= imgArr.length) {
+                        index = 0;
+                    }
+                }
+                , 1500);
+        }
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script id="ilt" src="https://www.yueliangjx.com/player/js/player.js" key="850aee62be22449ab44da2cbe9991263"
+        m="1"></script>
+    </head>
+
+
+</body>
+
+</html>
